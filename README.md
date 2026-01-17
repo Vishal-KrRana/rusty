@@ -21,3 +21,12 @@
 > - src : [root/learnings/guessing_game](https://github.com/Vishal-KrRana/rusty/tree/main/learnings/guessing_game "link to folder or guessing_game")
   - completed guessing game and developed an understanding about how rust implements error handling and the basic control flow and logic building in rust.
   - developed basic understanidg about keywords: let, match and mut.
+
+> - pratially completed variables and mutability
+  - src : [root/learnings/basic_concepts](https://github.com/Vishal-KrRana/rusty/tree/main/learnings/basic_concepts "link to folder or guessing_game")
+  - checkout [BASIC_CONCEPT.md](https://github.com/Vishal-KrRana/rusty/tree/main/learnings/basic_concepts/BASIC_CONCEPT.md "link to detailed guide for basic concept") for more details.
+
+> ## day 3 \(17-01-26\)
+  - completed variables and mutability.
+  - completed data types in rust.
+  - checkout [BASIC_CONCEPT.md](https://github.com/Vishal-KrRana/rusty/tree/main/learnings/basic_concepts/BASIC_CONCEPT.md "link to detailed guide for basic concept") for more details.
