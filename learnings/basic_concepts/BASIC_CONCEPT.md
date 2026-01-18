@@ -75,3 +75,41 @@ compound can group multipe values of different or same data types into a single 
   - we can access the elements of array by their index like: `a[0]` this would hold the value at index zero.
 
 > example of all the data types can be found in [data_types.rs](https://github.com/Vishal-KrRana/rusty/blob/main/learnings/basic_concepts/data_types.rs "click here to visit data_types.rs")
+
+> ## functions in rust
+  1. before starting functions we need to know about expression and statement in rust
+      - expressinons returns value after evaluation like `let x = 6 + 1;` 
+      - In above example the value 6 + 1 is an expression and returns a value 7 which would be stored in the variable x.
+      - The whole term `let x = 6 + 1;` is a statement which doesn't returns a value like expressin therefore can't be used like `let x = y = 6 + 1;`
+          - in above y is a unassigned variable which would be assigned by 7 but the x wouldn't be assigned by 7 it would be empty as `y = 6 + 1;` is a statement which doesn't returns a value for x to store.
+          - try to run [statement_expr.rs](https://github.com/Vishal-KrRana/rusty/blob/main/learnings/basic_concepts/statement_expr.rs "click here to visit statemen_expr.rs") and see the result.
+      - the expressions can be used with functions to return a value directly without using return keyword.
+  2. Types of function in rust: rust have function with parameter, without parameter, returning value, doesn't returns value.
+      - check the example in [functions.rs](https://github.com/Vishal-KrRana/rusty/blob/main/learnings/basic_concepts/functions.rs "click here to visit functions.rs")
+
+> ## Comments in rust
+  - the comments in rust serves the purpose of improving code readibility for developers and for automatically creating the doc for the code base on the basis of comments.
+  - Types of comments in rust:
+      1. `//` : this is single line comment which comments out entire line after its apperance the statements after it wouldn't read by the rust compiler.
+      2. /*<br>
+      explanations in multiple lines<br> 
+      line 2 <br>
+      line 3<br>
+      ...<br>
+      */ comment ends here everything inside it would be ignored by complier.
+
+> ## Control Flow in rust
+The control flow decides how the program would evaluated and how to proceed of the basis of conditions.
+  1. Branching statements: if, else, else if.
+      - if block is executed if the condition is met or condition evaluated to tru
+      - else block is run if the condition above the else block in `if` and `else if` is not met the desired condition. There is no condition is required to get into else block like `if` and `else if` blocks
+      - else if block is exeuted when the above blocks of `if` and `else if` fails to met their conditions.
+  2. Loops statements: loop, while, for
+      - loop: it is and infinite loop which runs infinitely undill manual intervantion like pressing ctrl+c or breaking the loop by `break;` when a certain condition is met. It doesn't require a condition to get inside the loop it's condition less loop.
+          - loop can be labeled to break the loop
+          - the lable follows the pattern `'label_name: loop { loop body }`
+          - when we need to break the loop we can do it using break with lable like `break label_name;`.
+      - while: the while loop is a loop with condition which stops when a certain condition is met inside the while loop block.It converts the condition which runs the while loop to false and the while loop breaks.
+      - for: the for loop is used to iterate over a continious data structure like array without going out of bounds. which makes it safe to iterate over the array without going out of the bounds. 
+      
+> check out [control_flow.rs](https://github.com/Vishal-KrRana/rusty/blob/main/learnings/basic_concepts/control_flow.rs "click here to visit control_flow.rs") to see examples of control flow

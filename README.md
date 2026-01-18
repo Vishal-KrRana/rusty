@@ -30,3 +30,9 @@
   - completed variables and mutability.
   - completed data types in rust.
   - checkout [BASIC_CONCEPT.md](https://github.com/Vishal-KrRana/rusty/tree/main/learnings/basic_concepts/BASIC_CONCEPT.md "link to detailed guide for basic concept") for more details.
+
+> ## day 4 \(18-01-26\)
+  - completed functions and learned about expressions and statements.
+  - comments is rust single line and multiline comments to improve readibility of code for developers
+  - control flow intro to branching: if, else, else if and loops: loop, while, for
+  - checkout [BASIC_CONCEPT.md](https://github.com/Vishal-KrRana/rusty/tree/main/learnings/basic_concepts/BASIC_CONCEPT.md "link to detailed guide for basic concept") for more details.
