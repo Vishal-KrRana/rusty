@@ -36,3 +36,13 @@
   - comments is rust single line and multiline comments to improve readibility of code for developers
   - control flow intro to branching: if, else, else if and loops: loop, while, for
   - checkout [BASIC_CONCEPT.md](https://github.com/Vishal-KrRana/rusty/tree/main/learnings/basic_concepts/BASIC_CONCEPT.md "link to detailed guide for basic concept") for more details.
+
+> ## day 5 \(19-01-26\)
+  - on the rust ownership and borrowing model 
+  - how rust handels stack and heap allocation and deallocation.
+  - checkout [OWNERSHIP.md](https://github.com/Vishal-KrRana/rusty/tree/main/learnings/ownership/OWNERSHIP.md "link to detailed guide for ownership model") for more details.
+
+> ## day 6 \(20-01-26\)
+  - how references and borrowing works in rust.
+  - how rust references and how we can manually reference the data in rust using `*` and `&` operators.
+  - checkout [OWNERSHIP.md](https://github.com/Vishal-KrRana/rusty/tree/main/learnings/ownership/OWNERSHIP.md "link to detailed guide for ownership model") for more details.
