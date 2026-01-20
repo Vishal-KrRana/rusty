@@ -66,7 +66,9 @@ the box is used to allocate memory when needed into the heap and the boxes takes
   - when the varible owning and referencing the heap data gets out of the scope the heap memory is also freed by the box 
   - this stops referencing a value in heap after getting free which can cause program crash or uncertain behaviour.
 
-    fn main(){
+lets understand it by example:
+
+    fn main() {
       let a = Box::new([0; 1_000_000]);
       let b = a;
     }
@@ -78,3 +80,17 @@ the box is used to allocate memory when needed into the heap and the boxes takes
   - the variable from whom ownership has been transferred cannot be used for referencing the heap data.
 
   > for more detailed and visual explanation check out: [rustbook](https://rust-book.cs.brown.edu/ch04-01-what-is-ownership.html) or understand by making change in [heap.rs](https://github.com/Vishal-KrRana/rusty/blob/main/learnings/ownership/heap.rs)
+
+
+> ## Referencing and Borrowing
+  - when u transfer the ownership to a function when the function scope ends the heap referenc also gets freed.
+  - this is trouble some but we can work around it by returning the argumenst and storing them in new variables.
+  - creation of new variable consumes memory so it's inefficient so there comes the referencing.
+  - referencing allows programmer to give the access to the heap data without transferring the ownership but how?
+      - instead of heap memory address the address of variable which is storing the memroy location of heap is passed to the function as argument or we can say that references is give as the argument.
+      - like argument points to the variable who own the heap data and the variable points to the heap.
+      - So ownership remains to the variable instead of arguments.
+  - check [reference.rs](https://github.com/Vishal-KrRana/rusty/blob/main/learnings/ownership/reference.rs) for example code.
+
+  ### Dereferencing
+  rust does dereferencing for us automaticall but we can also do it manually by using `*`. the process of deferencing is important and we need to access the correct data and doing dereferencing wrong can cause some unexpected behaviour or errors.
