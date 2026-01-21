@@ -94,3 +94,14 @@ lets understand it by example:
 
   ### Dereferencing
   rust does dereferencing for us automaticall but we can also do it manually by using `*`. the process of deferencing is important and we need to access the correct data and doing dereferencing wrong can cause some unexpected behaviour or errors.
+
+
+  ### Simultaneous aliasing and mutation:
+rust prevents us from simultaneous alisaing and mutation. why?
+  - when the memory is allocated into heap the reference is assinged to a variable owning it.
+  - when the resize of allocated memory happens the resize causes change of memory address and the reference to that varible changes.
+  - let a variable points to a certain data in the heap memory and try to mutate it.
+  - before the mutation let's say the resize of heap happens then the reference to that memory location is invalid. and mutation can cause some problems like crashing of program. 
+  - this is why simultaneous aliasing and mutation should not happen in any program who is working with heap.
+  - rust restrict this by Read(R), Write(W) and Ownership(O) access.
+  - the R, W and O access is provided to variables referencing to heap data such that the simultaneous mutation or aliasing doesn't happen. which can cause program failures or crashes.
