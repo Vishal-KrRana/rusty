@@ -105,3 +105,13 @@ rust prevents us from simultaneous alisaing and mutation. why?
   - this is why simultaneous aliasing and mutation should not happen in any program who is working with heap.
   - rust restrict this by Read(R), Write(W) and Ownership(O) access.
   - the R, W and O access is provided to variables referencing to heap data such that the simultaneous mutation or aliasing doesn't happen. which can cause program failures or crashes.
+  - In case of mutable references the R access is also removed from the variable while the referencing value is in use to prevent concurrent read and write.
+
+  checkout : [r_w_o.rs](https://github.com/Vishal-KrRana/rusty/blob/main/learnings/ownership/r_w_o.rs) or [mutable_ref.rs](https://github.com/Vishal-KrRana/rusty/blob/main/learnings/ownership/mutable_ref.rs) for example
+
+> ### Fixing Ownership errors
+fixing ownership errors in rust is key skill to have as the ownership is the key working model of rust for safety of programs created by rust which makes rust more reliable.
+  - Reference must outlive its scope to be referenced if the referenced data has been freed it will cause problems as the data is not present there.
+  - The reference returned to stack from a function should have the valid reference as if it has been freed the this will cause error.
+  - Ownership errors can also be occured due to lack of Read, Write and Own access permission the access should be taken care of before implementing the function becuse lack of permissions can cause the error. permission should be given in such a way that the error doesn't occurs and program is efficient.
+  -
